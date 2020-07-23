@@ -1,7 +1,8 @@
-package us.codecraft.tinyioc.proxy.staticproxy;
+package com.fx.designpartterns.proxy.staticproxy;
 
-import us.codecraft.tinyioc.proxy.Book;
-import us.codecraft.tinyioc.proxy.BookDao;
+
+import com.fx.designpartterns.proxy.Book;
+import com.fx.designpartterns.proxy.BookDao;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package us.codecraft.tinyioc.build;
+package com.fx.designpartterns.build;
 
 /**
  * @Author: FangXu

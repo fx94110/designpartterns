@@ -1,9 +1,8 @@
-package us.codecraft.tinyioc.factory;
+package com.fx.designpartterns.factory;
 
-import us.codecraft.tinyioc.BeanDefinition;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import com.fx.designpartterns.BeanDefinition;
+
 
 /**
  * @Author: FangXu

@@ -1,4 +1,4 @@
-package us.codecraft.tinyioc.proxy;
+package com.fx.designpartterns.proxy;
 
 import java.util.List;
 

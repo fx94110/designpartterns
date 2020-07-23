@@ -1,4 +1,4 @@
-package us.codecraft.tinyioc;
+package com.fx.designpartterns;
 
 import java.util.ArrayList;
 import java.util.List;
