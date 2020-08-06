@@ -1,4 +1,6 @@
-package us.codecraft.tinyioc.singleton;
+package com.fx.designpartterns.singleton;
+
+import java.util.concurrent.ExecutorService;
 
 /**
  * double check 机制
@@ -9,6 +11,8 @@ package us.codecraft.tinyioc.singleton;
 public class DoubleCheckSingleton {
     // volatile 反正jvm重排序
     private static volatile DoubleCheckSingleton singleton = null;
+
+    private static ExecutorService executorService;
 
     private DoubleCheckSingleton() {
 

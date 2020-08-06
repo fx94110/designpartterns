@@ -1,4 +1,4 @@
-package us.codecraft.tinyioc.singleton;
+package com.fx.designpartterns.singleton;
 
 /**
  * 内部类 Holder lazy class , Thread-safe,没有double-check的混乱

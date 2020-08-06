@@ -1,4 +1,4 @@
-package us.codecraft.tinyioc.singleton;
+package com.fx.designpartterns.singleton;
 
 /**
  * 枚举类型
