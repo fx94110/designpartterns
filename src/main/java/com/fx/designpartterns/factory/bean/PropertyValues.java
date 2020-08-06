@@ -1,4 +1,4 @@
-package com.fx.designpartterns;
+package com.fx.designpartterns.factory.bean;
 
 import java.util.ArrayList;
 import java.util.List;

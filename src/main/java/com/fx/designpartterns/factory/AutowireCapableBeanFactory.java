@@ -1,7 +1,10 @@
 package com.fx.designpartterns.factory;
 
 
-import com.fx.designpartterns.BeanDefinition;
+import com.fx.designpartterns.factory.bean.BeanDefinition;
+import com.fx.designpartterns.factory.bean.PropertyValue;
+
+import java.lang.reflect.Field;
 
 /**
  * @Author: FangXu
@@ -11,13 +14,21 @@ import com.fx.designpartterns.BeanDefinition;
 public class AutowireCapableBeanFactory extends AbstractBeanFactory {
 
     @Override
-    protected Object doCreateBean(BeanDefinition beanDefinition) {
-
-        return null;
+    protected Object doCreateBean(BeanDefinition beanDefinition) throws Exception {
+        Object bean = this.createBeanInstance(beanDefinition);
+        this.applyPropertyValues(bean, beanDefinition);
+        return bean;
     }
 
-    private Object getBeanInstance() {
+    private Object createBeanInstance(BeanDefinition beanDefinition)  throws Exception {
+        return beanDefinition.getBeanClass().newInstance();
+    }
 
-        return null;
+    private void applyPropertyValues(Object bean, BeanDefinition beanDefinition) throws Exception {
+        for (PropertyValue propertyValue : beanDefinition.getPropertyValues().getPropertyValueList()) {
+            Field declaredField = bean.getClass().getDeclaredField(propertyValue.getName());
+            declaredField.setAccessible(true);
+            declaredField.set(bean, propertyValue.getValue());
+        }
     }
 }
